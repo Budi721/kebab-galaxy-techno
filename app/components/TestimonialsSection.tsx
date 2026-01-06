@@ -61,7 +61,7 @@ export function TestimonialsSection() {
 
               {/* Testimonial Content */}
               <blockquote className="text-lg leading-8 text-gray-700">
-                <p>"{testimonial.content}"</p>
+                <p>&quot;{testimonial.content}&quot;</p>
               </blockquote>
 
               {/* Author Info */}
@@ -77,7 +77,7 @@ export function TestimonialsSection() {
 
               {/* Decorative quote mark */}
               <div className="absolute top-4 right-4 text-6xl font-serif text-brand-primary/10">
-                "
+                &quot;
               </div>
 
               {/* Hover effect decorative element */}
