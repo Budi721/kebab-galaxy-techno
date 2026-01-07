@@ -20,13 +20,13 @@ interface MenuSectionProps {
 export function MenuSection({ menuItems }: MenuSectionProps) {
   if (menuItems.length === 0) {
     return (
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
               Menu
             </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
+            <p className="mt-2 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
               Menu akan segera tersedia
             </p>
           </div>
@@ -36,7 +36,7 @@ export function MenuSection({ menuItems }: MenuSectionProps) {
   }
 
   return (
-    <section id="menu" className="relative bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32">
+    <section id="menu" className="relative bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
       {/* Decorative background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl"></div>
@@ -45,17 +45,17 @@ export function MenuSection({ menuItems }: MenuSectionProps) {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
             Jelajahi{' '}
             <span className="bg-gradient-to-r from-brand-primary-dark to-brand-accent bg-clip-text text-transparent">
               Menu Kami
             </span>
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-sm leading-6 text-gray-600 sm:mt-4 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
             Pilihan kebab lezat dengan berbagai varian untuk memenuhi selera Anda
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-6 sm:mt-8 sm:grid-cols-2 sm:gap-6 lg:mx-0 lg:mt-12 lg:max-w-none lg:grid-cols-3 lg:gap-8">
           {menuItems.map((item) => (
             <Card
               key={item.id}
@@ -63,7 +63,7 @@ export function MenuSection({ menuItems }: MenuSectionProps) {
             >
               {/* Image with overlay effect */}
               {item.image_url && (
-                <div className="relative aspect-h-4 aspect-w-3 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 sm:aspect-none sm:h-64 overflow-hidden">
+                <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 overflow-hidden sm:h-64">
                   <Image
                     src={item.image_url}
                     alt={item.name}

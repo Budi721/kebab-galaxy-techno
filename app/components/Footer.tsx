@@ -18,11 +18,11 @@ export function Footer({ brand }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-white pb-20 pt-16 sm:pb-32 sm:pt-20">
+    <footer className="relative bg-white pb-12 pt-12 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20 xl:pb-32 xl:pt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-4 sm:space-y-6">
           {/* Social Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             {brand.whatsapp_link && (
               <a
                 href={brand.whatsapp_link}
@@ -31,8 +31,8 @@ export function Footer({ brand }: FooterProps) {
                 className="flex items-center gap-2 text-gray-600 transition-colors hover:text-brand-accent"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="h-6 w-6" />
-                <span className="text-sm font-medium">WhatsApp</span>
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="text-xs font-medium sm:text-sm">WhatsApp</span>
               </a>
             )}
             {brand.instagram_link && (
@@ -43,13 +43,13 @@ export function Footer({ brand }: FooterProps) {
                 className="flex items-center gap-2 text-gray-600 transition-colors hover:text-brand-accent"
                 aria-label="Instagram"
               >
-                <Instagram className="h-6 w-6" />
-                <span className="text-sm font-medium">Instagram</span>
+                <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="text-xs font-medium sm:text-sm">Instagram</span>
               </a>
             )}
           </div>
           {/* Copyright */}
-          <div className="text-center text-sm text-gray-600">
+          <div className="text-center text-xs text-gray-600 sm:text-sm">
             <p>
               &copy; {currentYear} {brand.brand_name || 'Kebab Galaxy'}. All
               rights reserved.

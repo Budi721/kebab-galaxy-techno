@@ -33,49 +33,49 @@ export function HighlightsSection() {
   ]
 
   return (
-    <section className="relative bg-gradient-to-br from-brand-primary/10 via-white to-brand-accent/10 py-24 sm:py-32">
+    <section className="relative bg-gradient-to-br from-brand-primary/10 via-white to-brand-accent/10 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
       {/* Decorative background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-48 h-48 bg-brand-primary/20 rounded-full blur-3xl sm:w-64 sm:h-64"></div>
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-brand-accent/20 rounded-full blur-3xl sm:w-64 sm:h-64"></div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
             Kebab Galaxy dalam{' '}
             <span className="bg-gradient-to-r from-brand-primary-dark to-brand-accent bg-clip-text text-transparent">
               Angka
             </span>
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-sm leading-6 text-gray-600 sm:mt-4 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
             Bukti nyata kualitas dan dedikasi kami dalam menyajikan kebab terbaik
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 gap-8 sm:grid-cols-4 lg:max-w-none">
+        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-4 sm:mt-8 sm:gap-6 lg:mt-12 lg:max-w-none lg:grid-cols-4 lg:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl bg-white p-6 text-center shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="group relative rounded-xl bg-white p-4 text-center shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 sm:rounded-2xl sm:p-6"
             >
               {/* Icon */}
-              <div className="text-4xl mb-4">{stat.icon}</div>
+              <div className="text-3xl mb-3 sm:text-4xl sm:mb-4">{stat.icon}</div>
               
               {/* Number dengan gradient */}
-              <div className="text-4xl font-extrabold bg-gradient-to-r from-brand-primary-dark to-brand-accent bg-clip-text text-transparent sm:text-5xl">
+              <div className="text-3xl font-extrabold bg-gradient-to-r from-brand-primary-dark to-brand-accent bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
                 {stat.number}
               </div>
               
               {/* Label */}
-              <div className="mt-2 text-lg font-semibold text-gray-900">
+              <div className="mt-2 text-sm font-semibold text-gray-900 sm:text-base lg:text-lg">
                 {stat.label}
               </div>
               
               {/* Description */}
-              <div className="mt-1 text-sm text-gray-600">
+              <div className="mt-1 text-xs text-gray-600 sm:text-sm">
                 {stat.description}
               </div>
 
